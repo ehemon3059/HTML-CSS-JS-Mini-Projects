@@ -68,7 +68,7 @@ body{
         align-items: center;
         box-shadow:2px 4px 5px rgba(0, 0, 0, 0.3);
         transform: translateX(200%);
-        transition: transform 0.7s ease;
+        transition: transform 1s ease;
     }
     .box:nth-child(even){
         transform: translateX(-200%);

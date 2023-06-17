@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h1{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.container{
+    background-color: #e5e7eb;
+    height: 100vh;
+    width: auto;
+}
+.balance-show{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.disposit{
+    height: 150px;
+    width: 350px;
+    background-color: #0E2954;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+.disposit:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#diposit-balance{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.withdraw{
+    height: 150px;
+    width: 350px;
+    background-color: #1F6E8C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+#withdraw-balance{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.remaining{
+    height: 150px;
+    width: 350px;
+    background-color: #2E8A99;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly
+}
+#remaining-balance{
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+.balance-input{
+    margin-top: 100px;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.diposit-balance-input{
+    height: 150px;
+    width: 350px;
+    background-color: #2fc4b2;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+
+}
+.withdraw-balance-input{
+    height: 150px;
+    width: 350px;
+    background-color: #018ABE;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card:hover{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
