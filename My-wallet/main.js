@@ -75,19 +75,19 @@ document.getElementById("withdraw-btn").addEventListener("click", function(){
     const newWithdraw = PreviousWithdrawBalance + withdrawBalance;
     withdrawCard.innerText = newWithdraw;
 
-//Remaining Balance 
-const remaing = document.getElementById("remaining-balance");
-const remaingVal = remaing.innerText;
-const previousRemaingBalance = parseInt(remaingVal);
+    //Remaining Balance 
+    const remaing = document.getElementById("remaining-balance");
+    const remaingVal = remaing.innerText;
+    const previousRemaingBalance = parseInt(remaingVal);
 
 
 
-if(previousRemaingBalance< withdrawBalance){
-    alert("You do not have sufficient balance ");
-    withdrawCard.innerText = 0;
-    withdraw.value = '';
-    return;
-}
+    if(previousRemaingBalance< withdrawBalance){
+        alert("You do not have sufficient balance ");
+        withdrawCard.innerText = 0;
+        withdraw.value = '';
+        return;
+    }
 
    //new Remaining  balance
    const newRemainingBalance =  previousRemaingBalance - withdrawBalance ;
@@ -101,18 +101,15 @@ if(previousRemaingBalance< withdrawBalance){
 
    withdraw.value = "";
 });
-//Remaining Balance 
-window.onload = function() {
-    var savedValue = sessionStorage.getItem('remainingBalance');
-    if(savedValue == null){
-        alert(savedValue);
-        return;
+    //Remaining Balance get from session value
+    window.onload = function() {
+
+        var savedValue = sessionStorage.getItem('remainingBalance');
+        if(savedValue == null){
+            return;
+        }
+        var spanElement = document.getElementById('remaining-balance');
+        spanElement.textContent = JSON.parse(savedValue);
+
     }
-
-    var spanElement = document.getElementById('remaining-balance');
-
-
-
-    spanElement.textContent = JSON.parse(savedValue);
-}
 
