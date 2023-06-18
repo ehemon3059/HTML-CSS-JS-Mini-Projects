@@ -1,9 +1,3 @@
-// Remaining Balance 
-window.onload = function() {
-    var savedValue = sessionStorage.getItem('remainingBalance');
-    var spanElement = document.getElementById('remaining-balance');
-    spanElement.textContent = JSON.parse(savedValue);
-  };
 
 
 
@@ -40,12 +34,19 @@ document.getElementById("disposit-btn").addEventListener("click", function(){
     remaing.innerText = currentRemaing;
 
 
+    //session value set on remain balance
     var spanElement = document.getElementById('remaining-balance');
     var spanValue = spanElement.textContent;
 
     sessionStorage.setItem('remainingBalance', JSON.stringify(spanValue));
 
 
+    var savedValue = sessionStorage.getItem('remainingBalance');
+    var spanElement = document.getElementById('remaining-balance');
+
+
+
+    spanElement.textContent = JSON.parse(savedValue);
     depositInput.value = '';
 
 });
@@ -59,7 +60,7 @@ document.getElementById("withdraw-btn").addEventListener("click", function(){
 
     if(isNaN(withdrawBalance)){
         alert("Please Enter a Number");
-        withdrawVal = '';
+        withdraw.value = '';
         return;
     }
 
@@ -83,6 +84,8 @@ const previousRemaingBalance = parseInt(remaingVal);
 
 if(previousRemaingBalance< withdrawBalance){
     alert("You do not have sufficient balance ");
+    withdrawCard.innerText = 0;
+    withdraw.value = '';
     return;
 }
 
@@ -95,6 +98,21 @@ if(previousRemaingBalance< withdrawBalance){
    var spanValue = spanElement.textContent;
 
    sessionStorage.setItem('remainingBalance', JSON.stringify(spanValue));
-     withdraw.value = "";
+
+   withdraw.value = "";
 });
+//Remaining Balance 
+window.onload = function() {
+    var savedValue = sessionStorage.getItem('remainingBalance');
+    if(savedValue == null){
+        alert(savedValue);
+        return;
+    }
+
+    var spanElement = document.getElementById('remaining-balance');
+
+
+
+    spanElement.textContent = JSON.parse(savedValue);
+}
 
